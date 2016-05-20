@@ -14,12 +14,10 @@ def join_matrices(matrix, vector):
         matrix[i].append(vector[i])
     return matrix
 
-def gaussian_elimination(matrix, vector):
+def gaussian_elimination(matrix):
     """Joins given matrix and vector in new matrix and transforms it into upper
     triangular matrix."""
     n = len(matrix)
-    matrix = join_matrices(matrix, vector)
-
     for i in range(n):
         # find max element and swap lines of remaining unsolved matrix
         max_elem = abs(matrix[i][i])
@@ -63,6 +61,7 @@ def interpolate(points):
     errors can be quite large.
     """
     matrix, vector = points_to_matrix(points)
-    matrix = gaussian_elimination(matrix, vector)
+    matrix = join_matrices(matrix, vector)
+    matrix = gaussian_elimination(matrix)
     coefficients = solve_system(matrix)
     return coefficients
