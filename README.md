@@ -1,2 +1,10 @@
-# Polynomial interpolation
-Given n points, python script finds a polynomial of degree n-1 which goes exactly through these points.
+# Curve fitting
+Some python scripts for curve fitting.
+
+# Dependencies
+* [Python nose](http://nose.readthedocs.io/)
+
+# Testing
+```
+nosetests3
+```
