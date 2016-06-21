@@ -5,7 +5,6 @@ class TestNearestNeighborInterpolation(unittest.TestCase):
     def check_functions_equal(self, f1, f2):
         """This does NOT guarantee that function are equal."""
         for x in range(-30, 30):
-            print(x, f1(x), f2(x))
             self.assertEqual(f1(x), f2(x))
             self.assertEqual(f1(x / 2000), f2(x / 2000))
 

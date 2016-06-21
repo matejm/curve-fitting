@@ -1,4 +1,4 @@
-"""Simplest interpolation method"""
+"""Easiest interpolation method."""
 
 def nearest_neighbor_interpolation(points):
     """
